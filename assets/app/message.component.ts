@@ -3,6 +3,7 @@ import { Message } from './message.model';
 import { MessageService } from "./message.service";
 
 @Component({
+    moduleId: module.id,
     selector: 'messages',
     templateUrl: 'message.template.html',
     providers: [MessageService]
