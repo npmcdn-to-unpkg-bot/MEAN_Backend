@@ -2,7 +2,8 @@
 var map = {
     'app': 'js/app', // 'dist',
     'rxjs': 'js/vendor/rxjs',
-    '@angular': 'js/vendor/@angular'
+    '@angular': 'js/vendor/@angular',
+    '@angular2-material': 'js/vendor/@angular2-material'
 };
 
 // packages tells the System loader how to load when no filename and/or no extension
@@ -10,6 +11,30 @@ var packages = {
     'app': {main: 'boot.js', defaultExtension: 'js'},
     'rxjs': {defaultExtension: 'js'}
 };
+
+var materialPkgs = [
+    'core',
+    'button',
+    'card',
+    'sidenav',
+    'checkbox',
+    'radio',
+    'button-toggle',
+    'grid-list',
+    'icon',
+    'input',
+    'list',
+    'menu',
+    'progress-bar',
+    'progress-circle',
+    'tabs',
+    'toolbar',
+    'tooltip',
+];
+
+materialPkgs.forEach((pkg) => {
+    packages[`@angular2-material/${pkg}`] = {main: `${pkg}.js`};
+});
 
 var packageNames = [
     '@angular/common',

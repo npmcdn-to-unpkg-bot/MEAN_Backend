@@ -3,8 +3,8 @@
  */
 
 export class User {
-    constructor(public username : string,
-                public password : string,
-                public mail : string,
+    constructor(public mail: string,
+                public name: string,
+                public password? : string,
                 public id?: string) {}
 }

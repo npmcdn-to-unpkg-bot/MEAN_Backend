@@ -1,0 +1,9 @@
+<div class="col-md-6">
+    <div class="panel panel-default" *ngFor="let user of users; let i = index;">
+        <div class="panel-body">
+            {{ user.password }}
+            {{ user.mail }}
+            {{ user.name }}
+        </div>
+    </div>
+</div>
